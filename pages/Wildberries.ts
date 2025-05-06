@@ -8,7 +8,8 @@ export class Wildberries {
     }
 
     async goTo(){
-        await this.page.goto('https://www.wildberries.ru/')   
+        await this.page.goto('https://www.wildberries.ru/')
+        await this.page.getByAltText('Wildberries').waitFor({state: 'visible'})  
     }
 
     async fillSearch(){
