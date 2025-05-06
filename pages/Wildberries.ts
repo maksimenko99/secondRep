@@ -9,7 +9,7 @@ export class Wildberries {
 
     async goTo(){
         await this.page.goto('https://www.wildberries.ru/')
-        await this.page.getByAltText('Wildberries').waitFor({state: 'visible'})  
+        await this.page.locator('div.main-page__banner-info').waitFor({state: 'visible'})  
     }
 
     async fillSearch(){
