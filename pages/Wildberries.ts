@@ -9,7 +9,7 @@ export class Wildberries {
 
     async goTo(){
         await this.page.goto('https://www.wildberries.ru/')
-        await this.page.waitForLoadState('networkidle')
+        await this.page.waitForTimeout(2000)
     }
 
     async fillSearch(){
